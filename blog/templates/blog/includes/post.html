@@ -1,0 +1,13 @@
+ {% load static %}
+ 
+ <li>
+    <article class="post">
+        <a href="{% url "single-post  , slug=post.slug" %}" >
+            <img src="{% static "blog/images/mountains.jpg" %}" alt=Mountains/>
+            <div class="posts__content">
+                <h3>Mountain hiking</h3>
+                <p>The views of the mountains are super great definitely </p>
+            </div>
+        </a>
+    </article>
+</li>

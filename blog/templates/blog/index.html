@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+My Website
+{% endblock  %}
+
+{% block css_files %}
+
+<link rel="stylesheet" href="{% static "blog/index.css" %}"/>
+<link rel="stylesheet" href={% static "blog/post.css" %}/>
+
+{% endblock  %}
+
+
+{% block content %}
+
+<section id="main-section">
+    <div class="content-wrapper">
+        <img src="{% static "blog/images/img.png" %}" alt="Haseeb-The author"/>
+        <p>This is Haseeb Liaquat, Working as an IT professtional and AI enthausiat......</p>
+    </div>
+</section>
+
+<section id="latest-posts">
+    <h2>My latest thoughts</h2>
+
+    <ul>
+        {% include "blog/includes/post.html" %}
+
+    </ul>
+</section>
+
+<section id="about">
+    <h2>What is Do</h2>
+    <p>I love programming and solving things and mainly exploring Ai....</p>
+    <p>Goal is to keep on going with different things to be a successful person and last but not the least keep on travelling.</p>
+
+</section>
+
+{% endblock  %}
